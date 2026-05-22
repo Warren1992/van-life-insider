@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: #1f7a3a;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+header button,
+form button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.hero {
+  background: #1f7a3a;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  padding: 90px 90px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 1.05;
+  margin: 0 0 25px;
+}
+
+.hero p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input {
+  padding: 20px;
+  font-size: 22px;
+  border: none;
+  border-radius: 4px;
+}
+
+small {
+  font-size: 16px;
+}
+
+.latest {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 80px 60px;
+}
+
+.van-image {
+  height: 330px;
+  border-radius: 6px;
+  background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2)),
+              url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-card h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.stories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.stories-header h2 {
+  font-size: 38px;
+}
+
+.stories-header a {
+  color: #111;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+article {
+  border-bottom: 1px solid #ddd;
+  padding: 25px 0;
+}
+
+article span {
+  color: #1f7a3a;
+  font-weight: 900;
+}
+
+article h3 {
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+article p {
+  color: #555;
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero,
+  .latest {
+    grid-template-columns: 1fr;
+    padding: 50px 25px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
