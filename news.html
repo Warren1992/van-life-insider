@@ -1,241 +1,465 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    .card-link {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Van Life Insider News</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #050505;
+  background: white;
+}
+
+header {
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  border-bottom: 1px solid #eee;
+  background: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 900;
   text-decoration: none;
-  color: inherit;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #137c36;
+}
+
+nav a {
+  margin: 0 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.subscribe {
+  background: #050505;
+  color: white;
+  padding: 18px 32px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.mobile-subscribe {
+  display: none;
+}
+
+.search-section {
+  padding: 60px;
+  display: flex;
+  gap: 12px;
+}
+
+.search-section input {
+  width: 390px;
+  padding: 18px;
+  font-size: 20px;
+  border: 1px solid #9aa4b2;
+  border-radius: 5px;
+}
+
+.search-section button {
+  padding: 18px 36px;
+  font-size: 20px;
+  font-weight: 800;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  padding: 0 60px 80px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: black;
   display: block;
 }
 
 .card-link:hover {
   opacity: 0.92;
 }
-  </style>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Van Life Insider News</title>
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #050505;
-      background: white;
-    }
 
-    header {
-      height: 95px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 60px;
-      border-bottom: 1px solid #eee;
-      background: white;
-    }
+.card img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+  border-radius: 5px;
+  background: #ddd;
+}
 
-    .logo {
-      font-size: 32px;
-      font-weight: 900;
-      text-decoration: none;
-      color: black;
-      letter-spacing: 1px;
-    }
+.category {
+  color: #137c36;
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-    .logo span {
-      color: #137c36;
-    }
+.card h2 {
+  font-size: 28px;
+  line-height: 1.15;
+  margin: 10px 0;
+}
 
-    nav a {
-      margin: 0 18px;
-      color: black;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 18px;
-    }
+.card p {
+  font-size: 20px;
+  line-height: 1.45;
+  margin: 0 0 14px;
+}
 
-    .subscribe {
-      background: #050505;
-      color: white;
-      padding: 18px 32px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 18px;
-    }
+.author {
+  color: #6d7680;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-    .search-section {
-      padding: 60px;
-      display: flex;
-      gap: 12px;
-    }
+.site-footer {
+  background: #d8e8ff;
+  padding: 55px 60px 45px;
+  color: #050505;
+}
 
-    .search-section input {
-      width: 390px;
-      padding: 18px;
-      font-size: 20px;
-      border: 1px solid #9aa4b2;
-      border-radius: 5px;
-    }
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
 
-    .search-section button {
-      padding: 18px 36px;
-      font-size: 20px;
-      font-weight: 800;
-      background: #111;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
+.footer-logo {
+  font-size: 42px;
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+}
 
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 45px;
-      padding: 0 60px 80px;
-    }
+.footer-logo span {
+  color: #137c36;
+}
 
-    .card img {
-      width: 100%;
-      height: 235px;
-      object-fit: cover;
-      border-radius: 5px;
-      background: #ddd;
-    }
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 
-    .category {
-      color: #137c36;
-      font-size: 15px;
-      font-weight: 900;
-      margin-top: 22px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.footer-nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 0 14px;
+  border-right: 1px solid black;
+}
 
-    .card h2 {
-      font-size: 28px;
-      line-height: 1.15;
-      margin: 10px 0;
-    }
+.footer-nav a:last-child {
+  border-right: none;
+}
 
-    .card p {
-      font-size: 20px;
-      line-height: 1.45;
-      margin: 0 0 14px;
-    }
+.site-footer hr {
+  border: none;
+  border-top: 1px solid #6f7f91;
+  margin: 55px 0;
+}
 
-    .author {
-      color: #6d7680;
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 1.2fr 1fr;
+  gap: 45px;
+}
 
-    @media (max-width: 900px) {
-      header {
-        padding: 25px;
-        height: auto;
-        flex-direction: column;
-        gap: 20px;
-      }
+.footer-bottom > div {
+  border-right: 1px solid #6f7f91;
+  padding-right: 35px;
+}
 
-      .news-grid {
-        grid-template-columns: 1fr;
-        padding: 0 25px 60px;
-      }
+.footer-bottom > div:last-child {
+  border-right: none;
+}
 
-      .search-section {
-        padding: 40px 25px;
-        flex-direction: column;
-      }
+.footer-bottom h3 {
+  font-size: 24px;
+  margin: 0 0 24px;
+  font-weight: 900;
+}
 
-      .search-section input {
-        width: auto;
-      }
-    }
-  </style>
+.footer-bottom a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 18px;
+}
+
+.footer-bottom p {
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.socials {
+  font-size: 34px !important;
+  font-weight: 900;
+  letter-spacing: 10px;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 88px;
+    padding: 0 22px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #eee;
+    z-index: 999;
+    padding: 18px 0;
+  }
+
+  nav.active a {
+    padding: 18px 26px;
+    font-size: 24px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .subscribe {
+    display: none;
+  }
+
+  .mobile-subscribe {
+    display: block;
+    background: black;
+    color: white !important;
+    margin: 20px 26px 8px;
+    padding: 18px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .search-section {
+    padding: 35px 25px;
+    flex-direction: column;
+  }
+
+  .search-section input,
+  .search-section button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    padding: 0 25px 60px;
+    gap: 45px;
+  }
+
+  .card img {
+    height: 230px;
+  }
+
+  .site-footer {
+    padding: 40px 25px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-size: 32px;
+  }
+
+  .footer-nav {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .footer-nav a {
+    border-right: none;
+    padding: 0;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom > div {
+    border-right: none;
+    border-bottom: 1px solid #6f7f91;
+    padding-bottom: 25px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <a class="logo" href="index.html">🚐 VAN LIFE <span>INSIDER</span></a>
+<header>
+  <a class="logo" href="index.html">
+    🚐 VAN LIFE <span>INSIDER</span>
+  </a>
 
-    <nav>
+  <nav id="mobileNav">
+    <a href="news.html">News</a>
+    <a href="gear.html">Gear</a>
+    <a href="builds.html">Builds</a>
+    <a href="camping.html">Camping</a>
+    <a href="money.html">Money</a>
+    <a class="mobile-subscribe" href="index.html#subscribe">Subscribe</a>
+  </nav>
+
+  <a class="subscribe" href="index.html#subscribe">Subscribe</a>
+
+  <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="search-section">
+  <input type="text" placeholder="Search stories...">
+  <button>Search</button>
+</section>
+
+<main class="news-grid">
+
+  <a href="best-portable-power-stations-van-life-2026.html" class="card-link">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7" alt="Portable power station">
+      <div class="category">Gear</div>
+      <h2>The Best Portable Power Stations for Van Life in 2026</h2>
+      <p>Portable power stations are getting cheaper, faster, and more powerful.</p>
+      <div class="author">Van Life Insider</div>
+    </article>
+  </a>
+
+  <a href="how-people-afford-van-life-2026.html" class="card-link">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c" alt="Van life road trip">
+      <div class="category">Money</div>
+      <h2>How People Actually Afford Van Life in 2026</h2>
+      <p>Remote work, delivery apps, seasonal jobs, and the real costs behind road life.</p>
+      <div class="author">Van Life Insider</div>
+    </article>
+  </a>
+
+  <a href="the-safest-places-to-sleep-in-a-van-overnight.html" class="card-link">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Van life overnight parking">
+      <div class="category">Camping</div>
+      <h2>The Safest Places to Sleep in a Van Overnight</h2>
+      <p>Where experienced van lifers actually park overnight—and what beginners should avoid.</p>
+      <div class="author">Van Life Insider</div>
+    </article>
+  </a>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <a class="footer-logo" href="index.html">
+      🚐 VAN LIFE <span>INSIDER</span>
+    </a>
+
+    <div class="footer-nav">
       <a href="news.html">News</a>
-      <a href="#">Gear</a>
-      <a href="#">Builds</a>
-      <a href="#">Camping</a>
-      <a href="#">Money</a>
-    </nav>
+      <a href="gear.html">Gear</a>
+      <a href="builds.html">Builds</a>
+      <a href="camping.html">Camping</a>
+      <a href="money.html">Money</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </div>
+  </div>
 
-    <a class="subscribe" href="index.html#subscribe">Subscribe</a>
-  </header>
+  <hr>
 
-  <section class="search-section">
-    <input type="text" placeholder="Search stories..." />
-    <button>Search</button>
-  </section>
+  <div class="footer-bottom">
+    <div>
+      <h3>🚐 VAN LIFE INSIDER</h3>
+      <a href="#">About Van Life Insider</a>
+      <a href="#">Advertise with us</a>
+      <a href="#">Shop</a>
+      <a href="#">FAQ</a>
+    </div>
 
-  <main class="news-grid">
+    <div>
+      <h3>Topics</h3>
+      <a href="gear.html">Gear</a>
+      <a href="builds.html">Builds</a>
+      <a href="camping.html">Camping</a>
+      <a href="money.html">Nomad Money</a>
+    </div>
 
-<a href="best-portable-power-stations-van-life-2026.html" class="card-link">
+    <div>
+      <h3>Follow</h3>
+      <p class="socials">𝕏 in f ♪ ▶ ◎</p>
+      <p>Useful van life news, gear, builds, camping, and money tips.</p>
+    </div>
 
-  <article class="card">
+    <div>
+      <p>© 2026 <u>Van Life Insider</u></p>
+      <p>All Rights Reserved.</p>
+      <a href="#">Privacy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Preferences</a>
+    </div>
+  </div>
+</footer>
 
-    <img 
-      src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7"
-      alt="Portable power station"
-    >
-
-    <div class="category">GEAR</div>
-
-    <h2>The Best Portable Power Stations for Van Life in 2026</h2>
-
-    <p>
-      Portable power stations are getting cheaper, faster, and more powerful.
-    </p>
-
-    <div class="author">VAN LIFE INSIDER</div>
-
-  </article>
-
-</a>
-    
-<a href="how-people-afford-van-life-2026.html" class="card-link">
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c" alt="Van life road trip">
-    <div class="category">MONEY</div>
-    <h2>How People Actually Afford Van Life in 2026</h2>
-    <p>Remote work, delivery apps, seasonal jobs, and the real monthly costs behind life on the road.</p>
-    <div class="author">VAN LIFE INSIDER</div>
-  </article>
-</a>
-    
-<a href="the-safest-places-to-sleep-in-a-van-overnight.html" class="card-link">
-
-  <article class="card">
-
-    <img 
-      src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-      alt="Van life overnight parking"
-    >
-
-    <div class="category">CAMPING</div>
-
-    <h2>The Safest Places to Sleep in a Van Overnight</h2>
-
-    <p>
-      Where experienced van lifers actually park overnight—and the biggest mistakes beginners make.
-    </p>
-
-    <div class="author">VAN LIFE INSIDER</div>
-
-  </article>
-
-</a>
-
-  </main>
+<script>
+function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
+```
