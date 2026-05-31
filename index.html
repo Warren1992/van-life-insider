@@ -286,16 +286,29 @@
 <body>
 
 <header>
-  <div class="logo">🚐 VAN LIFE <span>INSIDER</span></div>
-<nav>
-  <a href="news.html">News</a>
-  <a href="gear.html">Gear</a>
-  <a href="builds.html">Builds</a>
-  <a href="camping.html">Camping</a>
-  <a href="money.html">Money</a>
-</nav>
-  <button>Subscribe</button>
-  <div class="mobile-menu">☰</div>
+
+  <a class="logo" href="index.html">
+    🚐 VAN LIFE <span>INSIDER</span>
+  </a>
+
+  <nav id="mobileNav">
+
+    <a href="news.html">News</a>
+    <a href="gear.html">Gear</a>
+    <a href="builds.html">Builds</a>
+    <a href="camping.html">Camping</a>
+    <a href="money.html">Money</a>
+
+    <a class="mobile-subscribe" href="index.html#subscribe">
+      Subscribe
+    </a>
+
+  </nav>
+
+  <div class="mobile-menu" onclick="toggleMenu()">
+    ☰
+  </div>
+
 </header>
 
 <section class="hero">
