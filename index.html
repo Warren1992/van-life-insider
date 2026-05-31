@@ -228,6 +228,54 @@
     padding-bottom: 25px;
   }
 }
+    @media (max-width: 768px) {
+  header {
+    height: 90px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  nav,
+  .subscribe {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .hero {
+    padding: 55px 28px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 22px;
+    line-height: 1.45;
+  }
+
+  .hero form,
+  .hero input,
+  .hero button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8" />
