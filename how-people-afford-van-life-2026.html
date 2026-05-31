@@ -1,140 +1,399 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>How People Actually Afford Van Life in 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How People Actually Afford Van Life in 2026</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:#050505;
+  background:white;
+}
+
+header{
+  height:95px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 60px;
+  border-bottom:1px solid #eee;
+  background:white;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:900;
+  text-decoration:none;
+  color:black;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:#137c36;
+}
+
+nav a{
+  margin:0 18px;
+  color:black;
+  text-decoration:none;
+  font-weight:800;
+  font-size:18px;
+}
+
+.subscribe{
+  background:#050505;
+  color:white;
+  padding:18px 32px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:18px;
+}
+
+.article{
+  max-width:720px;
+  margin:60px auto;
+  line-height:1.6;
+  padding:0 20px;
+}
+
+.article h1{
+  font-size:42px;
+  line-height:1.05;
+  margin-bottom:10px;
+}
+
+.article h2{
+  margin-top:45px;
+  font-size:32px;
+}
+
+.article p,
+.article li{
+  font-size:22px;
+}
+
+.category{
+  color:#137c36;
+  font-weight:900;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.hero{
+  width:100%;
+  margin:30px 0 5px;
+  border-radius:4px;
+}
+
+.caption{
+  font-size:12px !important;
+  color:#777;
+}
+
+.newsletter-box{
+  background:#137c36;
+  color:white;
+  padding:30px;
+  margin-top:50px;
+  border-radius:6px;
+}
+
+.site-footer{
+  background:#d8e8ff;
+  padding:55px 60px 45px;
+  color:#050505;
+  margin-top:80px;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:30px;
+}
+
+.footer-logo{
+  font-size:42px;
+  font-weight:900;
+  text-decoration:none;
+  color:black;
+  letter-spacing:1px;
+}
+
+.footer-logo span{
+  color:#137c36;
+}
+
+.footer-nav{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.footer-nav a{
+  color:black;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:800;
+  padding:0 14px;
+  border-right:1px solid black;
+}
+
+.footer-nav a:last-child{
+  border-right:none;
+}
+
+.site-footer hr{
+  border:none;
+  border-top:1px solid #6f7f91;
+  margin:55px 0;
+}
+
+.footer-bottom{
+  display:grid;
+  grid-template-columns:1.1fr 1.2fr 1.2fr 1fr;
+  gap:45px;
+}
+
+.footer-bottom > div{
+  border-right:1px solid #6f7f91;
+  padding-right:35px;
+}
+
+.footer-bottom > div:last-child{
+  border-right:none;
+}
+
+.footer-bottom h3{
+  font-size:24px;
+  margin:0 0 24px;
+  font-weight:900;
+}
+
+.footer-bottom a{
+  display:block;
+  color:black;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:800;
+  margin:0 0 18px;
+}
+
+.footer-bottom p{
+  font-size:18px;
+  margin:0 0 16px;
+}
+
+.socials{
+  font-size:36px !important;
+  font-weight:900;
+  letter-spacing:12px;
+}
+
+@media (max-width:900px){
+
+  header{
+    padding:25px;
+    height:auto;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .site-footer{
+    padding:40px 25px;
+  }
+
+  .footer-top{
+    flex-direction:column;
+  }
+
+  .footer-bottom{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom > div{
+    border-right:none;
+    border-bottom:1px solid #6f7f91;
+    padding-bottom:25px;
+  }
+
+}
+</style>
+
 </head>
 <body>
 
-<!-- HEADER: paste your same homepage header here -->
+<header>
 
-<article style="max-width:720px; margin:60px auto; font-family:Arial,sans-serif; line-height:1.6; padding:0 20px;">
+  <a class="logo" href="index.html">
+    🚐 VAN LIFE <span>INSIDER</span>
+  </a>
 
-  <p style="color:#137c36; font-weight:900; font-size:14px;">MONEY</p>
+  <nav>
+    <a href="news.html">News</a>
+    <a href="gear.html">Gear</a>
+    <a href="builds.html">Builds</a>
+    <a href="camping.html">Camping</a>
+    <a href="money.html">Money</a>
+  </nav>
 
-  <h1 style="font-size:42px; line-height:1.05; margin-bottom:10px;">
-    How People Actually Afford Van Life in 2026
-  </h1>
+  <a class="subscribe" href="index.html#subscribe">
+    Subscribe
+  </a>
 
-  <p style="font-size:18px; font-weight:600;">
-    Van life looks cheap online. Then reality shows up with insurance, repairs, gas, food, campsites, phone bills, laundry, and the occasional “why is my van making that sound?” emergency.
-  </p>
+</header>
 
-  <img 
-    src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c"
-    alt="Van life road trip"
-    style="width:100%; margin:30px 0 5px; border-radius:4px;"
-  >
+<article class="article">
 
-  <p style="font-size:12px; color:#777;">Image: Van Life Insider</p>
+<p class="category">MONEY</p>
 
-  <p>
-    So how are people actually paying for life on the road in 2026?
-  </p>
+<h1>How People Actually Afford Van Life in 2026</h1>
 
-  <p>
-    The answer is less glamorous than Instagram makes it look: most van lifers are stacking multiple income streams, lowering fixed expenses, and staying flexible.
-  </p>
+<p>
+Van life looks cheap online. Then reality shows up with insurance, repairs, gas, food, campsites, phone bills, laundry, and the occasional “why is my van making that sound?” emergency.
+</p>
 
-  <h2>Remote work is still the cleanest setup</h2>
+<img
+class="hero"
+src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c"
+alt="Van life road trip">
 
-  <p>
-    The easiest version of van life is having a normal online job and taking it with you. Customer support, coding, design, writing, virtual assistant work, bookkeeping, sales, and marketing all fit the lifestyle better than most traditional jobs.
-  </p>
+<p class="caption">Image: Van Life Insider</p>
 
-  <p>
-    The catch: remote workers need reliable power, cell service, and internet. That usually means a good phone plan, a hotspot, a power station, and sometimes Starlink.
-  </p>
+<p>
+So how are people actually paying for life on the road in 2026?
+</p>
 
-  <h2>Delivery apps fill the gaps</h2>
+<p>
+The answer is less glamorous than Instagram makes it look: most van lifers are stacking multiple income streams, lowering fixed expenses, and staying flexible.
+</p>
 
-  <p>
-    A lot of travelers use DoorDash, Uber Eats, Instacart, Spark, or similar apps when they land near a decent city.
-  </p>
+<h2>Remote work is still the cleanest setup</h2>
 
-  <p>
-    It is not always amazing money, but it can help cover groceries, gas, or a repair bill while keeping your schedule flexible.
-  </p>
+<p>
+The easiest version of van life is having a normal online job and taking it with you.
+</p>
 
-  <h2>Seasonal jobs are underrated</h2>
+<p>
+Customer support, coding, writing, virtual assistant work, design, bookkeeping, and marketing all fit the lifestyle better than most traditional jobs.
+</p>
 
-  <p>
-    Campgrounds, national park towns, ski resorts, farms, warehouses, and tourist areas often need seasonal workers.
-  </p>
+<h2>Delivery apps fill the gaps</h2>
 
-  <p>
-    Some jobs even include a place to park, which can make them way more valuable than the hourly pay suggests.
-  </p>
+<p>
+A lot of travelers use DoorDash, Uber Eats, Instacart, Spark, or similar apps when they land near a decent city.
+</p>
 
-  <h2>The real trick is lowering your monthly burn</h2>
+<p>
+It is not always amazing money, but it can help cover groceries, gas, or repairs while keeping your schedule flexible.
+</p>
 
-  <p>
-    Van life gets easier when your required monthly expenses are low.
-  </p>
+<h2>Seasonal jobs are underrated</h2>
 
-  <ul>
-    <li>No apartment rent</li>
-    <li>No huge furniture costs</li>
-    <li>Fewer random purchases</li>
-    <li>Smaller living space</li>
-    <li>More control over travel speed</li>
-  </ul>
+<p>
+Campgrounds, ski towns, warehouses, farms, and tourist areas constantly need seasonal workers.
+</p>
 
-  <p>
-    The people who make van life work usually do not travel fast every day. They slow down, stay in one region longer, cook simple meals, and avoid turning every week into a vacation.
-  </p>
+<p>
+Some jobs even include places to park overnight, which makes them far more valuable than the hourly pay alone.
+</p>
 
-  <h2>Content can help, but it is not instant money</h2>
+<h2>The real trick is lowering your monthly burn</h2>
 
-  <p>
-    YouTube, TikTok, blogs, newsletters, and affiliate links can eventually earn money, but most creators do not make much at first.
-  </p>
+<ul>
+<li>No apartment rent</li>
+<li>Smaller living space</li>
+<li>Fewer random purchases</li>
+<li>More flexibility</li>
+<li>Lower fixed costs</li>
+</ul>
 
-  <p>
-    The smarter move is treating content like a long-term asset, not your emergency paycheck.
-  </p>
+<p>
+The people who make van life work usually slow down and stay in one area longer instead of constantly driving across the country.
+</p>
 
-  <h2>Common monthly expenses</h2>
+<h2>Bottom line</h2>
 
-  <p>
-    A realistic van life budget usually includes:
-  </p>
+<p>
+People afford van life in 2026 by combining remote income, gig work, seasonal jobs, low expenses, and careful travel habits.
+</p>
 
-  <ul>
-    <li>Gas or charging</li>
-    <li>Insurance</li>
-    <li>Food</li>
-    <li>Phone and internet</li>
-    <li>Gym membership</li>
-    <li>Laundry</li>
-    <li>Repairs and maintenance</li>
-    <li>Campgrounds or paid parking when needed</li>
-  </ul>
+<div class="newsletter-box">
 
-  <p>
-    The biggest mistake is forgetting repairs. A van is both your vehicle and your home. When it breaks, your transportation and housing can both break at the same time.
-  </p>
+<h2 style="margin-top:0;">
+Get smarter about van life in 5 minutes.
+</h2>
 
-  <h2>Bottom line</h2>
+<p>
+Join Van Life Insider for free weekly updates on van builds, camping, gear, and nomad money.
+</p>
 
-  <p>
-    People afford van life in 2026 by combining remote income, gig work, seasonal jobs, low expenses, and careful travel habits.
-  </p>
-
-  <p>
-    The lifestyle is not free. But for people who keep their monthly costs low and avoid overbuilding their van, it can be cheaper than traditional rent.
-  </p>
-
-  <div style="background:#137c36; color:white; padding:30px; margin-top:40px; border-radius:6px;">
-    <h2 style="margin-top:0;">Get smarter about van life in 5 minutes.</h2>
-    <p>
-      Join Van Life Insider for free weekly updates on van builds, gear, camping spots, nomad money, and off-grid road life.
-    </p>
-  </div>
+</div>
 
 </article>
 
-<!-- FOOTER: paste your same homepage footer here -->
+<footer class="site-footer">
+
+  <div class="footer-top">
+
+    <a class="footer-logo" href="index.html">
+      🚐 VAN LIFE <span>INSIDER</span>
+    </a>
+
+    <div class="footer-nav">
+      <a href="news.html">News</a>
+      <a href="gear.html">Gear</a>
+      <a href="builds.html">Builds</a>
+      <a href="camping.html">Camping</a>
+      <a href="money.html">Money</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="footer-bottom">
+
+    <div>
+      <h3>🚐 VAN LIFE INSIDER</h3>
+      <a href="#">About Van Life Insider</a>
+      <a href="#">Advertise with us</a>
+      <a href="#">Shop</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <div>
+      <h3>Topics</h3>
+      <a href="gear.html">Gear</a>
+      <a href="builds.html">Builds</a>
+      <a href="camping.html">Camping</a>
+      <a href="money.html">Nomad Money</a>
+    </div>
+
+    <div>
+      <h3>Follow</h3>
+      <p class="socials">𝕏 in f ♪ ▶ ◎</p>
+      <p>Useful van life news, gear, builds, camping, and money tips.</p>
+    </div>
+
+    <div>
+      <p>© 2026 <u>Van Life Insider</u></p>
+      <p>All Rights Reserved.</p>
+      <a href="#">Privacy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Preferences</a>
+    </div>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
+```
