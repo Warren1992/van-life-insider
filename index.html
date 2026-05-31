@@ -131,7 +131,103 @@
     padding-bottom: 25px;
   }
 }
+    
+.mobile-menu {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 25px;
+    flex-direction: row;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  nav,
+  .subscribe {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    font-size: 34px;
+    font-weight: 900;
+  }
+
+  .hero {
+    padding: 50px 25px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    padding: 30px 25px;
+    gap: 45px;
+  }
+
+  .search-section {
+    padding: 30px 25px;
+    flex-direction: column;
+  }
+
+  .search-section input,
+  .search-section button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .article {
+    margin: 40px auto;
+    padding: 0 25px;
+  }
+
+  .article h1 {
+    font-size: 42px;
+  }
+
+  .article p,
+  .article li {
+    font-size: 22px;
+  }
+
+  .article img {
+    width: 100%;
+  }
+
+  .site-footer {
+    padding: 40px 25px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-size: 34px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom > div {
+    border-right: none;
+    border-bottom: 1px solid #6f7f91;
+    padding-bottom: 25px;
+  }
+}
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8" />
