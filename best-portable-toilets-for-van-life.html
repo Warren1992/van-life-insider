@@ -103,6 +103,58 @@ nav a{
   border-radius:6px;
 }
 
+ .newsletter-box{
+  background:#137c36;
+  color:white;
+  padding:30px;
+  margin-top:50px;
+  border-radius:6px;
+}
+
+.newsletter-box .formkit-form{
+  display:flex;
+  gap:12px;
+  margin-top:25px;
+  align-items:center;
+}
+
+.newsletter-box .formkit-field{
+  flex:1;
+}
+
+.newsletter-box .formkit-input{
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:5px;
+  font-size:18px;
+  box-sizing:border-box;
+}
+
+.newsletter-box .formkit-submit{
+  background:#050505;
+  color:white;
+  border:none;
+  padding:18px 30px;
+  border-radius:5px;
+  font-size:18px;
+  font-weight:800;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+@media (max-width:700px){
+
+  .newsletter-box .formkit-form{
+    flex-direction:column;
+  }
+
+  .newsletter-box .formkit-submit{
+    width:100%;
+  }
+
+} 
+
 .site-footer{
   background:#d8e8ff;
   padding:55px 60px 45px;
@@ -362,6 +414,32 @@ Get smarter about van life in 5 minutes.
 <p>
 Join Van Life Insider for free weekly updates on van builds, camping, gear, and nomad money.
 </p>
+
+<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+
+<form action="https://app.kit.com/forms/9472736/subscriptions"
+      class="seva-form formkit-form"
+      method="post"
+      data-sv-form="9472736"
+      data-uid="c792efb2d0"
+      data-format="inline"
+      data-version="5"
+      data-options='{"settings":{"powered_by":{"show":false}}}'>
+
+<div class="formkit-field">
+<input
+class="formkit-input"
+name="email_address"
+placeholder="Enter your email address"
+required
+type="email">
+</div>
+
+<button type="submit" class="formkit-submit">
+Subscribe Free
+</button>
+
+</form>
 
 </div>
 
