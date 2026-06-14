@@ -490,12 +490,12 @@ function toggleMenu() {
 </script>
   
 <script>
-  const searchInput = document.querySelector('.search-box input');
-  const searchButton = document.querySelector('.search-box button');
-  const cards = document.querySelectorAll('.article-card');
+  const searchInput = document.querySelector('.search-section input');
+  const searchButton = document.querySelector('.search-section button');
+  const cards = document.querySelectorAll('.card-link');
 
   function searchArticles() {
-    const searchText = searchInput.value.toLowerCase();
+    const searchText = searchInput.value.toLowerCase().trim();
 
     cards.forEach(card => {
       const cardText = card.innerText.toLowerCase();
