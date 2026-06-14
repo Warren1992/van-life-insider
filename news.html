@@ -488,7 +488,35 @@ function toggleMenu() {
   document.getElementById("mobileNav").classList.toggle("active");
 }
 </script>
+  
+<script>
+  const searchInput = document.querySelector('.search-box input');
+  const searchButton = document.querySelector('.search-box button');
+  const cards = document.querySelectorAll('.article-card');
 
+  function searchArticles() {
+    const searchText = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+      const cardText = card.innerText.toLowerCase();
+
+      if (cardText.includes(searchText)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  searchButton.addEventListener('click', searchArticles);
+
+  searchInput.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+      searchArticles();
+    }
+  });
+</script>
+  
 </body>
 </html>
 ```
