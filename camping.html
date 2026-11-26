@@ -361,27 +361,26 @@ nav a {
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Van Life Insider">
 <script src="/pwa-install.js" defer></script>
+<link rel="stylesheet" href="site-header.css">
 </head>
 
 <body>
 
-<header>
-  <a class="logo" href="index.html">
-    🚐 VAN LIFE <span>INSIDER</span>
-  </a>
-
-  <nav id="mobileNav">
-    <a href="news.html">News</a>
-    <a href="gear.html">Gear</a>
-    <a href="builds.html">Builds</a>
-    <a href="camping.html">Camping</a>
-    <a href="money.html">Money</a>
-    <a class="mobile-subscribe" href="index.html#subscribe">Subscribe</a>
-  </nav>
-
-  <a class="subscribe" href="index.html#subscribe">Subscribe</a>
-
-  <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+<header class="vli-header">
+  <div class="vli-header-inner">
+    <a class="vli-brand" href="index.html">
+      <span class="vli-brand-mark" aria-hidden="true">🚐</span>
+      <span>VAN LIFE <span class="vli-brand-accent">INSIDER</span></span>
+    </a>
+    <a class="vli-subscribe" href="index.html#subscribe">Subscribe</a>
+    <nav class="vli-nav" aria-label="Main navigation">
+      <a href="news.html">News</a>
+      <a href="gear.html">Gear</a>
+      <a href="builds.html">Builds</a>
+      <a href="camping.html" aria-current="page">Camping</a>
+      <a href="money.html">Money</a>
+    </nav>
+  </div>
 </header>
 
 <h1 class="section-title">Camping</h1>
@@ -476,11 +475,6 @@ nav a {
   </div>
 </footer>
 
-<script>
-function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("active");
-}
-</script>
   
 <script>
   const searchInput = document.querySelector('.search-section input');

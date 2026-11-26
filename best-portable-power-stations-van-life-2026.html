@@ -142,80 +142,24 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Van Life Insider">
 <script src="/pwa-install.js" defer></script>
+<link rel="stylesheet" href="site-header.css">
 </head>
 <body>
-<header style="
-  height:95px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 60px;
-  border-bottom:1px solid #eee;
-  background:white;
-  font-family:Arial,sans-serif;
-">
-
-  <a href="index.html" style="
-    font-size:32px;
-    font-weight:900;
-    text-decoration:none;
-    color:black;
-    letter-spacing:1px;
-  ">
-    🚐 VAN LIFE <span style="color:#137c36;">INSIDER</span>
-  </a>
-
-  <nav style="display:flex; gap:40px;">
-
-    <a href="news.html" style="
-      text-decoration:none;
-      color:black;
-      font-size:18px;
-      font-weight:800;
-    ">News</a>
-
-    <a href="gear.html" style="
-      text-decoration:none;
-      color:black;
-      font-size:18px;
-      font-weight:800;
-    ">Gear</a>
-
-    <a href="builds.html" style="
-      text-decoration:none;
-      color:black;
-      font-size:18px;
-      font-weight:800;
-    ">Builds</a>
-
-    <a href="camping.html" style="
-      text-decoration:none;
-      color:black;
-      font-size:18px;
-      font-weight:800;
-    ">Camping</a>
-
-    <a href="money.html" style="
-      text-decoration:none;
-      color:black;
-      font-size:18px;
-      font-weight:800;
-    ">Money</a>
-
-  </nav>
-
-  <a href="index.html#subscribe" style="
-    background:black;
-    color:white;
-    padding:18px 32px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:800;
-    font-size:18px;
-  ">
-    Subscribe
-  </a>
-
+<header class="vli-header">
+  <div class="vli-header-inner">
+    <a class="vli-brand" href="index.html">
+      <span class="vli-brand-mark" aria-hidden="true">🚐</span>
+      <span>VAN LIFE <span class="vli-brand-accent">INSIDER</span></span>
+    </a>
+    <a class="vli-subscribe" href="index.html#subscribe">Subscribe</a>
+    <nav class="vli-nav" aria-label="Main navigation">
+      <a href="news.html">News</a>
+      <a href="gear.html" aria-current="true">Gear</a>
+      <a href="builds.html">Builds</a>
+      <a href="camping.html">Camping</a>
+      <a href="money.html">Money</a>
+    </nav>
+  </div>
 </header>
 <article style="max-width: 720px; margin: 60px auto; font-family: Arial, sans-serif; line-height: 1.6; padding: 0 20px;">
 

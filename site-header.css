@@ -1,0 +1,149 @@
+.vli-header {
+  --vli-ink: #17231c;
+  --vli-accent: #16733e;
+  --vli-action: #173e2e;
+  --vli-paper: #fff;
+  --vli-line: #e6ebe7;
+  --vli-hover: #f0f5f1;
+  display: block;
+  height: auto;
+  padding: 0;
+  border-bottom: 1px solid var(--vli-line);
+  background: var(--vli-paper);
+  color: var(--vli-ink);
+  font-family: Arial, sans-serif;
+}
+.vli-header *, .vli-header *::before, .vli-header *::after { box-sizing: border-box; }
+.vli-header-inner {
+  width: min(100%, 1336px);
+  margin: 0 auto;
+  padding: 12px 13px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "brand subscribe" "nav nav";
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 8px;
+}
+.vli-header .vli-brand {
+  grid-area: brand;
+  justify-self: start;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  color: var(--vli-ink);
+  text-decoration: none;
+  font-size: clamp(15px, 4.1vw, 22px);
+  font-weight: 900;
+  letter-spacing: .015em;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+.vli-header .vli-brand-accent { color: var(--vli-accent); }
+.vli-header .vli-brand-mark { font-size: 1em; font-weight: 400; }
+.vli-header .vli-subscribe {
+  grid-area: subscribe;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 7px;
+  background: var(--vli-action);
+  color: #fff;
+  font-size: .8125rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.vli-header .vli-nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0;
+  position: static;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--vli-line);
+  background: transparent;
+}
+.vli-header .vli-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin: 0;
+  padding: 5px 0 3px;
+  border-bottom: 2px solid transparent;
+  color: var(--vli-ink);
+  font-size: clamp(.75rem, 3.5vw, .94rem);
+  font-weight: 700;
+  line-height: 1.16;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.vli-header .vli-nav a[aria-current] {
+  border-bottom-color: var(--vli-accent);
+  color: var(--vli-accent);
+}
+.vli-header .vli-nav a:hover { background: var(--vli-hover); }
+.vli-header a:focus-visible { z-index: 1; outline: 2px solid var(--vli-accent); outline-offset: -2px; }
+.vli-header .vli-subscribe:focus-visible { outline-color: #fff; outline-offset: -4px; }
+@media (min-width: 540px) {
+  .vli-header-inner { padding-inline: 24px; }
+  .vli-header .vli-brand { gap: 8px; }
+  .vli-header .vli-subscribe { font-size: .9rem; padding-inline: 18px; }
+}
+@media (min-width: 850px) {
+  .vli-header-inner {
+    min-height: 76px;
+    padding: 12px clamp(24px, 4vw, 56px);
+    grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
+    grid-template-areas: "brand nav subscribe";
+    gap: clamp(13px, 2.25vw, 34px);
+  }
+  .vli-header .vli-brand { font-size: clamp(19px, 2.25vw, 27px); }
+  .vli-header .vli-nav { border-top: 0; gap: clamp(9px, 1.5vw, 22px); }
+  .vli-header .vli-nav a { padding-inline: 5px; }
+}
+@media (prefers-color-scheme: dark) {
+  .vli-header {
+    --vli-ink: #f0f3f1;
+    --vli-accent: #85dea7;
+    --vli-paper: #19211d;
+    --vli-line: #34443a;
+    --vli-action: #245b40;
+    --vli-hover: #25332b;
+  }
+}
+@media (max-width: 340px) {
+  .vli-header-inner { padding-inline: 9px; column-gap: 5px; }
+  .vli-header .vli-brand { gap: 4px; font-size: 14px; }
+  .vli-header .vli-subscribe { padding-inline: 9px; }
+}
+
+.vli-header + article > h1 { text-wrap: balance; }
+
+/* Keep the article label and title together on phone-sized screens. */
+@media (max-width: 600px) {
+  .vli-header + article:has(> h1) {
+    margin-top: 34px !important; /* one legacy article has inline margins */
+  }
+  .vli-header + article > p:first-child:has(+ h1) {
+    margin-block: 0 8px;
+    line-height: 1.35;
+    letter-spacing: .06em;
+  }
+  .vli-header + article > h1 {
+    margin: 0 0 14px !important; /* one legacy article uses inline heading styles */
+    font-size: clamp(1.85rem, 8.5vw, 2.55rem) !important;
+    line-height: 1.12 !important;
+  }
+}
